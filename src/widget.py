@@ -14,3 +14,10 @@ def mask_account_card(account_card: str) -> str:
         return get_mask_account(out_account_card)
     else:
         return "Ошибка чтения параметров"
+
+
+def get_date(format_date: str) -> str:
+    """
+        1. Принимает неотформатированную строку даты, и возвращает ее в формате ДД.ММ.ГГГГ
+        """
+    return f"{format_date[8:10]}.{format_date[5:7]}.{format_date[:4]}"
